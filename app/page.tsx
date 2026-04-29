@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,7 +26,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button type="button">Start for free</Button>
+          <Link href="/login">
+            <Button type="button">Start for free</Button>
+          </Link>
           <Button type="button" variant="secondary">
             View template
           </Button>

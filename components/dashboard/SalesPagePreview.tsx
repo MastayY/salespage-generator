@@ -57,7 +57,7 @@ export function SalesPagePreview({
       : [];
     const features =
       typeof featuresSource[0] === "string"
-        ? (featuresSource as string[]).map((item) => ({
+        ? (featuresSource as unknown as string[]).map((item) => ({
             name: item,
             brief_detail: "",
           }))
@@ -324,7 +324,9 @@ export function SalesPagePreview({
             </span>
             <span>Sales Page</span>
           </div>
-          <Button type="button">Start for free</Button>
+          <Button type="button">
+            Start for free
+          </Button>
         </div>
       </header>
 
